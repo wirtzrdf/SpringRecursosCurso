@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cliente CRUD</title>
+  </head>
+  <body>
+    <h1>Nuevo cliente</h1>
+    <form method="post" action="#" th:action="@{/new/submit}" enctype="multipart/form-data"
+            th:object="${clienteForm}">
+            <input type="hidden" id="id" th:field="*{id}"/> </label><br/>
+            <label>Nombre:<input type="text" id="nombre" th:field="*{nombre}" /></label><br/>
+            <label>Edad:<input type="text" id="edad" th:field="*{edad}" /></label><br/>
+            <label>Imagen:<input type="file" name="file"/></label><br/>
+            <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
